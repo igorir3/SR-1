@@ -123,52 +123,56 @@ def create_character():
         input4 = str(input(">>> "))
         if input4 != 'save':
             Str_input4 = input4.split()
-            input4 = list(map(int, Str_input4))
-            input4[0] = input4[0] - 1
-            if input4[1] > 0:
-                if input4[1] <= 10:
-                    if Second_characteristics[2][0] == input4[0] or Second_characteristics[2][1] == input4[0] or Second_characteristics[2][2] == input4[0]:
-                        Backup_Second_characteristics = Second_characteristics[0][input4[0]]
-                        Second_characteristics[0][input4[0]] = input4[1]
-                        Sum_Second_characteristics = sum(Second_characteristics[0])
-                        if Sum_Second_characteristics > 20 :
-                            print("[bold red]Вы используете слишком много очков характеристик![/bold red]")
-                            print(f"[bold red]Максимум 20, а у вас {Sum_Second_characteristics}[/bold red]")
-                            print(" ")
-                            Second_characteristics[0][input4[0]] = Backup_Second_characteristics
-                        elif Sum_Second_characteristics < 20 :
-                            Points_Sum_Second_characteristics = 20 - Sum_Second_characteristics
-                            print("[bold green3]Готово![/bold green3]")
-                            print(f"У вас осталось [bold green3]{Points_Sum_Second_characteristics}[/bold green3] очков характеристик")
-                            print(" ")
+            if len(Str_input4) == 2:
+                input4 = list(map(int, Str_input4))
+                input4[0] = input4[0] - 1
+                if input4[1] > 0:
+                    if input4[1] <= 10:
+                        if Second_characteristics[2][0] == input4[0] or Second_characteristics[2][1] == input4[0] or Second_characteristics[2][2] == input4[0]:
+                            Backup_Second_characteristics = Second_characteristics[0][input4[0]]
+                            Second_characteristics[0][input4[0]] = input4[1]
+                            Sum_Second_characteristics = sum(Second_characteristics[0])
+                            if Sum_Second_characteristics > 20 :
+                                print("[bold red]Вы используете слишком много очков характеристик![/bold red]")
+                                print(f"[bold red]Максимум 20, а у вас {Sum_Second_characteristics}[/bold red]")
+                                print(" ")
+                                Second_characteristics[0][input4[0]] = Backup_Second_characteristics
+                            elif Sum_Second_characteristics < 20 :
+                                Points_Sum_Second_characteristics = 20 - Sum_Second_characteristics
+                                print("[bold green3]Готово![/bold green3]")
+                                print(f"У вас осталось [bold green3]{Points_Sum_Second_characteristics}[/bold green3] очков характеристик")
+                                print(" ")
+                            else:
+                                os.system('cls||clear')
+                                break
+                        elif characteristic[Second_characteristics[1][input4[0]]] * 2 >= input4[1]:
+                            Backup_Second_characteristics = Second_characteristics[0][input4[0]]
+                            Second_characteristics[0][input4[0]] = input4[1]
+                            Sum_Second_characteristics = sum(Second_characteristics[0])
+                            if Sum_Second_characteristics > 20 :
+                                print("[bold red]Вы используете слишком много очков характеристик![/bold red]")
+                                print(f"[bold red]Максимум 20, а у вас {Sum_Second_characteristics}[/bold red]")
+                                print(" ")
+                                Second_characteristics[0][input4[0]] = Backup_Second_characteristics
+                            elif Sum_Second_characteristics < 20 :
+                                Points_Sum_Second_characteristics = 20 - Sum_Second_characteristics
+                                print("[bold green3]Готово![/bold green3]")
+                                print(f"У вас осталось [bold green3]{Points_Sum_Second_characteristics}[/bold green3] очков характеристик")
+                                print(" ")
+                            else:
+                                os.system('cls||clear')
+                                break
                         else:
-                            os.system('cls||clear')
-                            break
-                    elif characteristic[Second_characteristics[1][input4[0]]] * 2 >= input4[1]:
-                        Backup_Second_characteristics = Second_characteristics[0][input4[0]]
-                        Second_characteristics[0][input4[0]] = input4[1]
-                        Sum_Second_characteristics = sum(Second_characteristics[0])
-                        if Sum_Second_characteristics > 20 :
-                            print("[bold red]Вы используете слишком много очков характеристик![/bold red]")
-                            print(f"[bold red]Максимум 20, а у вас {Sum_Second_characteristics}[/bold red]")
+                            print(f"[bold red]Вы не можете ввести в Доп.Хар. №{input4[0]+1} число {input4[1]} т. к. сюда можно ввести максимум {characteristic[Second_characteristics[1][input4[0]]] * 2}[/bold red]")
                             print(" ")
-                            Second_characteristics[0][input4[0]] = Backup_Second_characteristics
-                        elif Sum_Second_characteristics < 20 :
-                            Points_Sum_Second_characteristics = 20 - Sum_Second_characteristics
-                            print("[bold green3]Готово![/bold green3]")
-                            print(f"У вас осталось [bold green3]{Points_Sum_Second_characteristics}[/bold green3] очков характеристик")
-                            print(" ")
-                        else:
-                            os.system('cls||clear')
-                            break
                     else:
-                        print(f"[bold red]Вы не можете ввести в Доп.Хар. №{input4[0]+1} число {input4[1]} т. к. сюда можно ввести максимум {characteristic[Second_characteristics[1][input4[0]]] * 2}[/bold red]")
+                        print("[bold red]Число очков должно быть меньше или равно 10[/bold red]")
                         print(" ")
                 else:
-                    print("[bold red]Число очков должно быть меньше или равно 10[/bold red]")
+                    print("[bold red]Число очков должно быть более 0[/bold red]")
                     print(" ")
             else:
-                print("[bold red]Число очков должно быть более 0[/bold red]")
+                print("[bold red]Надо ввести 2 числа!!![/bold red]")
                 print(" ")
 
     os.system('cls||clear')
