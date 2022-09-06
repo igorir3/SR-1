@@ -1,8 +1,11 @@
 import json
 import os
+import time
 from pick import pick
 from rich import print
 import rich
+import random
+import math
 
 Day = 1
 Month = 9 
@@ -21,6 +24,122 @@ def start():
         raise SystemExit
     elif input1 == 'Создание xронических заболеваний':
         add_chronical()
+
+def loading():
+    os.system('cls||clear')
+    percent1 = 0
+    while percent1 < 100:
+        percent1 = percent1 + random.randint(1, 20)
+        if percent1 >= 100:
+            percent1 = 100
+            print(f"Starting...    {percent1}%")
+        else:
+            print(f"Starting...    {percent1}%", end="\r")
+        time.sleep(0.3)
+        
+    print(f"Loading", end="\r")
+    time.sleep(0.3)
+    print(f"Loading.", end="\r")
+    time.sleep(0.3)
+    print(f"Loading..", end="\r")
+    time.sleep(0.3)
+    print(f"Loading...")
+    time.sleep(0.3)
+
+    percent1 = 0
+    while percent1 < 100:
+        percent1 = percent1 + random.randint(1, 20)
+        if percent1 >= 100:
+            percent1 = 100
+            print(f"Initialisation...    {percent1}%")
+        else:
+            print(f"Initialisation...    {percent1}%", end="\r")
+        time.sleep(0.3)
+
+    print(f"Loading Data", end="\r")
+    time.sleep(0.3)
+    print(f"Loading Data.", end="\r")
+    time.sleep(0.3)
+    print(f"Loading Data..", end="\r")
+    time.sleep(0.3)
+    print(f"Loading Data...")
+    time.sleep(0.6)
+    print("[bold red] FILE NOT FOUND \n File C:\\User\\Data\\SR-1 Data\\Alpha Protocol.db    KEY Not Exist \n ERROR 0x80070002 [/bold red]", end="\r")
+    time.sleep(0.3)
+    print("[bold red]DATA ERROR[/bold red]")
+    time.sleep(0.3)
+    print("Repeat request")
+    time.sleep(0.2)
+    print(f"Loading Data", end="\r")
+    time.sleep(0.3)
+    print(f"Loading Data.")
+    time.sleep(0.4)
+    print("[bold red]ERROR 0x80070002[/bold red]")
+    time.sleep(0.3)
+    print("[bold red] Data Corrupted [/bold red]")
+    time.sleep(0.2)
+    print("Launching the emergency protocol", end="\r")
+    time.sleep(0.3)
+    t = 0
+    while t <= 2:
+        print("Launching the emergency protocol.", end="\r")
+        time.sleep(0.3)
+        print("Launching the emergency protocol..", end="\r")
+        time.sleep(0.3)
+        print("Launching the emergency protocol...", end="\r")
+        time.sleep(0.3)
+        t = t + 1
+    print("Launching the emergency protocol.", end="\r")
+    time.sleep(0.3)
+    print("Launching the emergency protocol..", end="\r")
+    time.sleep(0.3)
+    print("Launching the emergency protocol...")
+    time.sleep(0.3)
+    print("Searching recoverable data", end="\r")
+    time.sleep(0.3)
+    while t <= 3:
+        print("Searching recoverable data.", end="\r")
+        time.sleep(0.3)
+        print("Searching recoverable data..", end="\r")
+        time.sleep(0.3)
+        print("Searching recoverable data...", end="\r")
+        time.sleep(0.3)
+        t = t + 1
+    print("Searching recoverable data.", end="\r")
+    time.sleep(0.3)
+    print("Searching recoverable data..", end="\r")
+    time.sleep(0.3)
+    print("Searching recoverable data...")
+    time.sleep(0.3)
+    print("[bold green3]Process successful[/bold green3]")
+    print("Summary recoverable data", end="\r")
+    time.sleep(0.3)
+    while t <= 5:
+        print("Summary recoverable data.", end="\r")
+        time.sleep(0.3)
+        print("Summary recoverable data..", end="\r")
+        time.sleep(0.3)
+        print("Summary recoverable data...", end="\r")
+        time.sleep(0.3)
+        t = t + 1
+    print(f"Summary recoverable data... {random.randint(60, 90)}%")
+    time.sleep(0.3)
+    print("Summary recoverable data.", end="\r")
+    time.sleep(0.3)
+    print("Summary recoverable data..", end="\r")
+    time.sleep(0.3)
+    print("Summary recoverable data...")
+    time.sleep(0.3)
+    percent1 = 0
+    while percent1 < 100:
+        percent1 = percent1 + random.randint(1, 20)
+        if percent1 >= 100:
+            percent1 = 100
+            print(f"Close protocol starting...   {percent1}%")
+        else:
+            print(f"Close protocol starting...   {percent1}%", end="\r")
+        time.sleep(3)
+    start()
 
 def create_character():
     os.system('cls||clear')
@@ -369,8 +488,8 @@ def create_character():
     txt_file.write(f"Порог усталости : {Fatigue_threshold} {str_chron_added_main_characteristics[4]}\n")
     txt_file.write(f"Шаги            : {Steps} {str_chron_added_main_characteristics[3]}\n")
     txt_file.write(f"\n")
-    txt_file.write(f"Здоровье             : {Health} {str_chron_added_main_characteristics[0]}\n")
-    txt_file.write(f"Устойчивость к урону : {Damage_resistance} {str_chron_added_main_characteristics[1]}\n")
+#    txt_file.write(f"Здоровье             : {Health} {str_chron_added_main_characteristics[0]}\n")
+#    txt_file.write(f"Устойчивость к урону : {Damage_resistance} {str_chron_added_main_characteristics[1]}\n")
     txt_file.write(f"Скорость             : {Speed} {str_chron_added_main_characteristics[2]}\n")
     txt_file.write(f"\n")
     txt_file.write(f"Основные Характеристики\n")
@@ -441,8 +560,8 @@ def create_character():
     print(f"Порог усталости : {Fatigue_threshold} {str_chron_added_main_characteristics[4]}")
     print(f"Шаги            : {Steps} {str_chron_added_main_characteristics[3]}")
     print(f" ")
-    print(f"Здоровье             : {Health} {str_chron_added_main_characteristics[0]}")
-    print(f"Устойчивость к урону : {Damage_resistance} {str_chron_added_main_characteristics[1]}")
+#    print(f"Здоровье             : {Health} {str_chron_added_main_characteristics[0]}")
+#    print(f"Устойчивость к урону : {Damage_resistance} {str_chron_added_main_characteristics[1]}")
     print(f"Скорость             : {Speed} {str_chron_added_main_characteristics[2]}")
     print(f" ")
     print(f"Основные Характеристики")
@@ -574,8 +693,8 @@ def add_chronical():
             print("9. Дальний бой среднее оружие  19. Ловкость рук        ")
             print("10. Дальний бой тяжёлое оружие 20. Химия               ")
             print(" ")
-            print("1. Здоровье")
-            print("2. Устойчивость к урону")
+            print("1. [bold red][0x80070002][/bold red]")
+            print("2. [bold red][0x80070002][/bold red]")
             print("3. Скорость")
             print("4. Шаги (Писать количество)")
             print("5. Порог усталости")
@@ -586,14 +705,32 @@ def add_chronical():
                     break
                 input1 = input1.split()
                 input1 = list(map(int, input1))
-                input1[1] = input1[1] - 1
-                added_characteristics[input1[0]][input1[1]] = input1[2]
-                nameofjson = "chronical\\" + Name + '.json'
-                OutputJson = dict(Name=Name, added_characteristics=added_characteristics)
-                with open(nameofjson,"w") as write_file: 
-                    json.dump(OutputJson, write_file, ensure_ascii=False)
-                
+                if input1[0] != 2:
+                    input1[1] = input1[1] - 1
+                    added_characteristics[input1[0]][input1[1]] = input1[2]
+                    nameofjson = "chronical\\" + Name + '.json'
+                    OutputJson = dict(Name=Name, added_characteristics=added_characteristics)
+                    with open(nameofjson,"w") as write_file: 
+                        json.dump(OutputJson, write_file, ensure_ascii=False)
+                elif input1[1] == 3 or input1[1] == 4 or input1[1] == 5:
+                    input1[1] = input1[1] - 1
+                    added_characteristics[input1[0]][input1[1]] = input1[2]
+                    nameofjson = "chronical\\" + Name + '.json'
+                    OutputJson = dict(Name=Name, added_characteristics=added_characteristics)
+                    with open(nameofjson,"w") as write_file: 
+                        json.dump(OutputJson, write_file, ensure_ascii=False)
+                else:
+                    t = 1
+                    while t <= 500:
+                        print("[bold red]Данныe удалены![/bold red]")
+                        secsec = t / 10
+                        sec = math.exp(secsec * -1)
+                        time.sleep(sec)
+                        t = t + 1 
+                    Errrr = input("           ОШ  бКа )№    )а?   ;№ПЫВ *(ФА*%!__________     _________===      ")
+                    loading()
+                    
 
         elif maininput == 'Вернуться':
             start()
-start()
+loading()
